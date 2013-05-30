@@ -4,7 +4,7 @@
 int main()
 {
 	FILE *f,*f1,*f2,*f3,*f4,*f5,*f6,*f7,*f8,*f9,*f0,*d;
-	f=fopen("dataset.txt","r");
+	f=fopen("data.txt","r");
 	f0=fopen("zero.txt","a");
 	f1=fopen("one.txt","a");
 	f2=fopen("two.txt","a");

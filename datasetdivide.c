@@ -59,6 +59,7 @@ int main()
 			{
 				putc(c,f0);
 			}
+			putc(' ',f0);
 			putc(new,f0);
 			fclose(d);
 			d=fopen("dummy.txt","w+");
@@ -73,6 +74,7 @@ int main()
 			{
 				putc(c,f1);
 			}
+			putc(' ',f1);
 			putc(new,f1);
 			fclose(d);
 			d=fopen("dummy.txt","w+");
@@ -87,6 +89,7 @@ int main()
 			{
 				putc(c,f2);
 			}
+			putc(' ',f2);
 			putc(new,f2);
 			fclose(d);
 			d=fopen("dummy.txt","w+");
@@ -101,6 +104,7 @@ int main()
 			{
 				putc(c,f3);
 			}
+			putc(' ',f3);
 			putc(new,f3);
 			fclose(d);
 			d=fopen("dummy.txt","w+");
@@ -115,6 +119,7 @@ int main()
 			{
 				putc(c,f4);
 			}
+			putc(' ',f4);
 			putc(new,f4);
 			fclose(d);
 			d=fopen("dummy.txt","w+");
@@ -129,6 +134,7 @@ int main()
 			{
 				putc(c,f5);
 			}
+			putc(' ',f5);
 			putc(new,f5);
 			fclose(d);
 			d=fopen("dummy.txt","w+");
@@ -143,6 +149,7 @@ int main()
 			{
 				putc(c,f6);
 			}
+			putc(' ',f6);
 			putc(new,f6);
 			fclose(d);
 			d=fopen("dummy.txt","w+");
@@ -157,6 +164,7 @@ int main()
 			{
 				putc(c,f7);
 			}
+			putc(' ',f7);
 			putc(new,f7);
 			fclose(d);
 			d=fopen("dummy.txt","w+");
@@ -171,6 +179,7 @@ int main()
 			{
 				putc(c,f8);
 			}
+			putc(' ',f8);
 			putc(new,f8);
 			fclose(d);
 			d=fopen("dummy.txt","w+");
@@ -185,6 +194,7 @@ int main()
 			{
 				putc(c,f9);
 			}
+			putc(' ',f9);
 			putc(new,f9);
 			fclose(d);
 			d=fopen("dummy.txt","w+");
