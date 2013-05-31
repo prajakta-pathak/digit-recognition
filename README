@@ -1,0 +1,6 @@
+*The original data.txt consists of 1537 bitmaps and their corrosponding integer is written below them.
+*Here we are considering 1500 points as our training data and thus new-wxyz.txt corresponds to wxyz th data point.
+*convertintoint.c prints the value corresponding to the name of file entered.
+eg:
+if you want to see what is there in new-333.txt
+then => digit.exe data//new-333.txt
