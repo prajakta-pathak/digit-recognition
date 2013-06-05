@@ -1,7 +1,7 @@
 TARGET=digit.exe
 CC=gcc
 CFLAGS=-g
-OBJECTS=src/convertintoint.o
+OBJECTS=src/main.o src/digit.o
 
 $(TARGET): $(OBJECTS)
 	$(CC) $(CFLAGS) $(OBJECTS) -o $(TARGET)

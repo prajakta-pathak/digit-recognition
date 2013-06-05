@@ -4,8 +4,8 @@
 int main()
 {
 	FILE *f0,*f1;
-	f0=fopen("data//data.txt","r");
-	f1=fopen("data//trainingdata.txt","w+");
+	f0=fopen("data/data.txt","r");
+	f1=fopen("data/trainingdata.txt","w+");
 	int i=0;
 	char c;
 	while(i!=1500)

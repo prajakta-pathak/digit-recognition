@@ -4,19 +4,18 @@
 int main()
 {
 	FILE *f0,*f1;
-	f0=fopen("data//trainingdata.txt","r");
+	f0=fopen("data/trainingdata.txt","r");
 	char c;
 	char fname[16];
 	int i;
 	for(i=0;i<1500;i++)
 	{
-		sprintf(fname,"new-%d.txt",i);
+		sprintf(fname,"data/%d-digit.txt",i);
 		f1=fopen(fname,"a");		
 		while((c=fgetc(f0))!=' ')
 		{
 			putc(c,f1);
 		}
-		//fseek(f0,1,SEEK_CUR);
 		c=fgetc(f0);
 		fclose(f1);
 	}

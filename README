@@ -1,6 +1,7 @@
 *The original data.txt consists of 1537 bitmaps and their corrosponding integer is written below them.
 *Here we are considering 1500 points as our training data and thus new-wxyz.txt corresponds to wxyz th data point.
 *convertintoint.c prints the value corresponding to the name of file entered.
-eg:
-if you want to see what is there in new-333.txt
-then => digit.exe data//new-333.txt
+*initialy distance of the bitmap under cosideration from the average bitmap of 0's,1's,... 9's is calculated.
+*The least distance from all those distances is calculated and the corrosponding integer is assigned to that bitmap.
+*The main program calculates the accuracy of the above algorithm by taking into account 1500 bitmaps
+

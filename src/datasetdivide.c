@@ -4,18 +4,18 @@
 int main()
 {
 	FILE *f,*f1,*f2,*f3,*f4,*f5,*f6,*f7,*f8,*f9,*f0,*d;
-	f=fopen("data//data.txt","r");
-	f0=fopen("data//zero.txt","a");
-	f1=fopen("data//one.txt","a");
-	f2=fopen("data//two.txt","a");
-	f3=fopen("data//three.txt","a");
-	f4=fopen("data//four.txt","a");
-	f5=fopen("data//five.txt","a");
-	f6=fopen("data//six.txt","a");
-	f7=fopen("data//seven.txt","a");
-	f8=fopen("data//eight.txt","a");
-	f9=fopen("data//nine.txt","a");
-	d=fopen("data//dummy.txt","w+");
+	f=fopen("data/data.txt","r");
+	f0=fopen("data/zero.txt","a");
+	f1=fopen("data/one.txt","a");
+	f2=fopen("data/two.txt","a");
+	f3=fopen("data/three.txt","a");
+	f4=fopen("data/four.txt","a");
+	f5=fopen("data/five.txt","a");
+	f6=fopen("data/six.txt","a");
+	f7=fopen("data/seven.txt","a");
+	f8=fopen("data/eight.txt","a");
+	f9=fopen("data/nine.txt","a");
+	d=fopen("data/dummy.txt","w+");
 	int count=0,n,i;
 	n=31218/33;
 	char c,str[3],ch;
@@ -51,153 +51,63 @@ int main()
 		fgets(str,sizeof(str),d);
 		if(strcmp(str,temp0)==0)
 		{
-			printf("blah1");
-			fseek(d,-3,SEEK_END);
-			putc('E',d);
-			rewind(d);
-			while((c=fgetc(d))!='E')
-			{
-				putc(c,f0);
-			}
-			putc(' ',f0);
-			putc(new,f0);
+			fprintf(f0,"%d\n",i);
 			fclose(d);
-			d=fopen("data//dummy.txt","w+");
+			d=fopen("data/dummy.txt","w+");
 		}
 		else if(strcmp(str,temp1)==0)
 		{
-			printf("blah1");
-			fseek(d,-3,SEEK_END);
-			putc('E',d);
-			rewind(d);
-			while((c=fgetc(d))!='E')
-			{
-				putc(c,f1);
-			}
-			putc(' ',f1);
-			putc(new,f1);
+			fprintf(f1,"%d\n",i);
 			fclose(d);
-			d=fopen("data//dummy.txt","w+");
+			d=fopen("data/dummy.txt","w+");
 		}		
 		else if(strcmp(str,temp2)==0)
 		{
-			printf("blah1");
-			fseek(d,-3,SEEK_END);
-			putc('E',d);
-			rewind(d);
-			while((c=fgetc(d))!='E')
-			{
-				putc(c,f2);
-			}
-			putc(' ',f2);
-			putc(new,f2);
+			fprintf(f2,"%d\n",i);
 			fclose(d);
-			d=fopen("data//dummy.txt","w+");
+			d=fopen("data/dummy.txt","w+");
 		}	
 		else if(strcmp(str,temp3)==0)
 		{
-			printf("blah1");
-			fseek(d,-3,SEEK_END);
-			putc('E',d);
-			rewind(d);
-			while((c=fgetc(d))!='E')
-			{
-				putc(c,f3);
-			}
-			putc(' ',f3);
-			putc(new,f3);
+			fprintf(f3,"%d\n",i);
 			fclose(d);
-			d=fopen("data//dummy.txt","w+");
+			d=fopen("data/dummy.txt","w+");
 		}	
 		else if(strcmp(str,temp4)==0)
 		{
-			printf("blah1");
-			fseek(d,-3,SEEK_END);
-			putc('E',d);
-			rewind(d);
-			while((c=fgetc(d))!='E')
-			{
-				putc(c,f4);
-			}
-			putc(' ',f4);
-			putc(new,f4);
+			fprintf(f4,"%d\n",i);
 			fclose(d);
-			d=fopen("data//dummy.txt","w+");
+			d=fopen("data/dummy.txt","w+");
 		}	
 		else if(strcmp(str,temp5)==0)
 		{
-			printf("blah1");
-			fseek(d,-3,SEEK_END);
-			putc('E',d);
-			rewind(d);
-			while((c=fgetc(d))!='E')
-			{
-				putc(c,f5);
-			}
-			putc(' ',f5);
-			putc(new,f5);
+			fprintf(f5,"%d\n",i);
 			fclose(d);
-			d=fopen("data//dummy.txt","w+");
+			d=fopen("data/dummy.txt","w+");
 		}	
 		else if(strcmp(str,temp6)==0)
 		{
-			printf("blah1");
-			fseek(d,-3,SEEK_END);
-			putc('E',d);
-			rewind(d);
-			while((c=fgetc(d))!='E')
-			{
-				putc(c,f6);
-			}
-			putc(' ',f6);
-			putc(new,f6);
+			fprintf(f6,"%d\n",i);
 			fclose(d);
-			d=fopen("data//dummy.txt","w+");
+			d=fopen("data/dummy.txt","w+");
 		}	
 		else if(strcmp(str,temp7)==0)
 		{
-			printf("blah1");
-			fseek(d,-3,SEEK_END);
-			putc('E',d);
-			rewind(d);
-			while((c=fgetc(d))!='E')
-			{
-				putc(c,f7);
-			}
-			putc(' ',f7);
-			putc(new,f7);
+			fprintf(f7,"%d\n",i);
 			fclose(d);
-			d=fopen("data//dummy.txt","w+");
+			d=fopen("data/dummy.txt","w+");
 		}	
 		else if(strcmp(str,temp8)==0)
 		{
-			printf("blah1");
-			fseek(d,-3,SEEK_END);
-			putc('E',d);
-			rewind(d);
-			while((c=fgetc(d))!='E')
-			{
-				putc(c,f8);
-			}
-			putc(' ',f8);
-			putc(new,f8);
+			fprintf(f8,"%d\n",i);
 			fclose(d);
-			d=fopen("data//dummy.txt","w+");
+			d=fopen("data/dummy.txt","w+");
 		}	
 		else if(strcmp(str,temp9)==0)
 		{
-			printf("blah1");
-			fseek(d,-3,SEEK_END);
-			putc('E',d);
-			rewind(d);
-			while((c=fgetc(d))!='E')
-			{
-				putc(c,f9);
-			}
-			putc(' ',f9);
-			putc(new,f9);
+			fprintf(f9,"%d\n",i);
 			fclose(d);
-			d=fopen("data//dummy.txt","w+");
+			d=fopen("data/dummy.txt","w+");
 		}	
 	}
 	fclose(f);
