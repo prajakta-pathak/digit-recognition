@@ -7,7 +7,7 @@ void training_data_divide()
 	int i;
 	for(i=0;i<1500;i++)
 	{
-		sprintf(fname,"data/%d.txt",i);
+		sprintf(fname,"data/%d-digit.txt",i);
 		f1=fopen(fname,"a");		
 		while((c=fgetc(f0))!=' ')
 		{

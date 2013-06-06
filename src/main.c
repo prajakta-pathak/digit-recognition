@@ -15,7 +15,7 @@ int main(int argc,char *argv[])
 	{		
 		for(i=0;i<1500;i++)
 		{
-			sprintf(fname,"data/%d-digit.txt",i);
+			sprintf(fname,"data/%d.txt",i);
 			n1=prediction(fname);
 			n2=digitrec(fname);
 			if(n1==n2)
