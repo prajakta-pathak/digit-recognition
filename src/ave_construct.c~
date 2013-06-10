@@ -16,14 +16,10 @@ void ave_construct()
 	n0=fopen("data/zeroave.txt","a");
 	for(k=0;k<75;k++)
 	{
-	//75 iterations because we need 75 values per digit to make our training data consist of 750 samples
 		fscanf(f0,"%d",&dummy);
 		sprintf(fname,"data/%d.txt",dummy);
 		f1=fopen(fname,"r");	
 		printf("%s",fname);	
-
-		//open the text file representing zero
-
 		for(i=0;i<32;i++)
 		{
 			for(j=0;j<32;j++)
