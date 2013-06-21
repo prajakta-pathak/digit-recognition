@@ -4,20 +4,36 @@
 #include<math.h>
 #include"digit.h"
 
+int accuracy_one()
+{
+	int count=0,i;
+	float acc;
+	int n1,n2;
+	char fname[16];
+	for(i=0;i<1500;i++)
+		{
+			sprintf(fname,"data/%d.txt",i);
+			n1=prediction(fname);
+			n2=digitrec(fname);
+			if(n1==n2)
+			count++;
+		}
+	return count;
+}
 int prediction(char name[])
 {
-	int n;
+	int n,i;
 	float dist[10];
-	dist[0]=distancesq(name,"data/zeroave.txt");
-	dist[1]=distancesq(name,"data/oneave.txt");
-	dist[2]=distancesq(name,"data/twoave.txt");
-	dist[3]=distancesq(name,"data/threeave.txt");
-	dist[4]=distancesq(name,"data/fourave.txt");
-	dist[5]=distancesq(name,"data/fiveave.txt");
-	dist[6]=distancesq(name,"data/sixave.txt");
-	dist[7]=distancesq(name,"data/sevenave.txt");
-	dist[8]=distancesq(name,"data/eightave.txt");
-	dist[9]=distancesq(name,"data/nineave.txt");	
+	dist[0]=distancesq1(name,"data/zeroave.txt");
+	dist[1]=distancesq1(name,"data/oneave.txt");
+	dist[2]=distancesq1(name,"data/twoave.txt");
+	dist[3]=distancesq1(name,"data/threeave.txt");
+	dist[4]=distancesq1(name,"data/fourave.txt");
+	dist[5]=distancesq1(name,"data/fiveave.txt");
+	dist[6]=distancesq1(name,"data/sixave.txt");
+	dist[7]=distancesq1(name,"data/sevenave.txt");
+	dist[8]=distancesq1(name,"data/eightave.txt");
+	dist[9]=distancesq1(name,"data/nineave.txt");	
 	n=smallest(dist);	
 	return n;
 }
@@ -35,7 +51,7 @@ int smallest(float num[])
 	return res;
 }
 
-float distancesq(char in[], char ave[])
+float distancesq1(char in[], char ave[])
 {
 	float num1[32][32];
 	float num2[32][32];

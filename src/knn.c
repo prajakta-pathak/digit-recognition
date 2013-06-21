@@ -4,6 +4,24 @@
 #include<math.h>
 #include"digit.h"
 
+int accuracy_two()
+{
+	int count=0,i;
+	float acc;
+	int n1,n2;
+	char fname[16];
+	for(i=0;i<1500;i++)
+		{
+			sprintf(fname,"data/%d.txt",i);
+			n1=predict(fname);
+			n2=digitrec(fname);
+			if(n1==n2)
+			count++;
+			printf("%d\n",count);
+		}
+	return count;
+}
+
 int predict(char name[])
 {
 	int n=0,res;
