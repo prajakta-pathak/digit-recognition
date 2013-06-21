@@ -1,7 +1,17 @@
-#include"digit.h"
+#include"digit.h" 
+
+
+/* #anay:  you should specify better command line arguments
+ * your main program is named say "digit", then
+ * digit -b  (or digit --break)  should call the function "data_set_divide"
+ * to do this, you should use the library GNU getopt function (man getopt)
+ * getopt is the standard way of reading command line arguments
+ *
+ * before you do neural networks, you should all this. Good software engineering practices
+ */
 int main(int argc,char *argv[])
 {
-	int n1=0,n2=0;
+	int n1=0,n2=0; // #anay: bad variable names. 
 	int a1=0,a2=0;
 	int i,chk=0;
 	char fname[16];

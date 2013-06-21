@@ -1,11 +1,13 @@
+// #anay: please document your functions
+
 void create_training_data()
 {
 	FILE *f0,*f1;
-	f0=fopen("data/data.txt","r");
+	f0=fopen("data/data.txt","r"); //after every IO function, check whether the function has succeeded or not
 	f1=fopen("data/trainingdata.txt","w+");
 	int i=0;
 	char c;
-	while(i!=1500)
+	while(i!=1500) //dont hardcode 1500. use macro
 	{
 		while((c=fgetc(f0))!=' ')
 		{

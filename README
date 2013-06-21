@@ -5,3 +5,4 @@
 *The least distance from all those distances is calculated and the corrosponding integer is assigned to that bitmap.
 *The main program calculates the accuracy of the above algorithm by taking into account 1500 bitmaps
 
+#anay: please read main.c , data_set_divide.c , create_training_data.c 
