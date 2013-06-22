@@ -26,12 +26,12 @@ Now,
 
 **A)Method -1**
 <ol>
-<li> ./digit m1 acc => calculates the accuracy of this method.</li>
-<li> ./digit m1 data/45.txt => calculates the value of 45th sample according to this method.</li>
+<li> ./digit.exe m1 acc => calculates the accuracy of this method.</li>
+<li> ./digit.exe m1 data/45.txt => calculates the value of 45th sample according to this method.</li>
 </ol>
 	
 **B)Method -2**
 <ol>
-<li> ./digit m2 acc => calculates the accuracy of this method.</li>
-<li> ./digit m2 data/45.txt => calculates the value of 45th sample according to this method.</li>
+<li> ./digit.exe m2 acc => calculates the accuracy of this method.</li>
+<li> ./digit.exe m2 data/45.txt => calculates the value of 45th sample according to this method.</li>
 </ol>
