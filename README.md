@@ -5,8 +5,10 @@
 *We have 1500 bitmaps of digits and our aim is to recognize them.
 
 Two Algorithms Implemented:-
-1.Constructing the average matrix from all the possible bitmaps corrosponding to all individual digit and then finding the closest match.
-2.k-nearest neighbours
+<ol>
+<li>Constructing the average matrix from all the possible bitmaps corrosponding to all individual digit and then finding the closest match.</li>
+<li>k-nearest neighbours.</li>
+</ol>
 
 **Instructions**
 ----------------
