@@ -1,6 +1,0 @@
-Input: A .jpeg image of a number
-
-	1.file to read the file containing the image and convert that image into binary image (tobinary.c)
-	2.file to convert binary image into a matrix of 0's and 1's and store it in a text file. (tomat.c)
-	3.file to read the above text file and convert the matrix into a design of '*' .(tostar.c)
-	4.file to read the above file and identify that number and write that integer into a seperate text file.(identification.c)

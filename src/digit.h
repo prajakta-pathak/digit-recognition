@@ -1,8 +1,5 @@
 #ifndef DIGIT_H
 #define DIGIT_H
-
-
-
 int ispresent(char s[],char in[],int n);
 int digitrec(char input[]);
 float distancesq(char in[],char ave[]);
