@@ -1,4 +1,5 @@
 #include"digit.h" 
+#include <stdio.h>
 
 
 

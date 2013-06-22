@@ -6,7 +6,7 @@
 #include<math.h>
 #include"digit.h"
 #define SIZE 1500 // here SIZE refers to the size of our data set 
-void create_training_data()
+int create_training_data()
 {
 	FILE *f0,*f1;
 	f0=fopen("data/data.txt","r"); 
