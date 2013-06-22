@@ -1,0 +1,13 @@
+Here is a way of organizing your codes i suggest
+
+implement a function (your most high level function) which would take in the following arguments:
+* the method (as of now, you have two methods) that you are implementing to predict
+* the kind of operation that you want to perform (find accuracy, or predict the digit of a file etc)
+* input the filename for which you want to predict digit (in case you are using that mode)
+
+
+my point is that, software engineering is beautiful. And to understand its beauty, you need to DESIGN thingsa beautifully. So start thinking in that direction. how would you go about organizing your codes neatly ?.
+
+C is a very small language and this is good as you know that there are very little things that you dont know about C. So, you can be rest assured that you have all the tools to design a really cool software !
+
+As a pointer, go through my codes for snake again. They might help you organize your thoughts

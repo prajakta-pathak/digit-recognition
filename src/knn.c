@@ -7,6 +7,10 @@
 #define ROW 32
 #define COL 32
 #define SIZE 1500
+
+
+// #anay: you should have better naming conventions. give names to your two methods. Just saying accuray_two is not very informative
+
 int accuracy_two()
 {
 	//this function calculates the accuracy of method 2
