@@ -52,7 +52,7 @@ void data_set_divide()
 	char temp9[]=" 9";
 	for(i=0;i<n;i++)
 	{
-		while(count!=33)
+		while(count!=lines_per_datapoint)
 		{
 			ch=fgetc(f);
 			
