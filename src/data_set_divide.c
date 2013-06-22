@@ -1,13 +1,13 @@
-/* anay's comments on the codes starts with #anay
- *
- */
+//this function creates 10 files corrosponding to each digit
+//Each of these files stores the serial number of the bitmaps corrosponding to that digit
+//Eg: if 10 th bitmap corrosponds to 5 then 10 will be written in the file named "five.txt" 
 
-
-// #anay: please document your functions
-// to keep your approach scalable, you should not hardcode the file names in your functions
-// Instead, specify the file name, (or atleast the folder name) as your command line argument.
-// for examle, data_set_divide("data") would search for files "data/zero.txt" etc.
-
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<math.h>
+#define lines_per_datapoint 33 // each bitmap contains 32 lines and one extra line corrosponding to its value which makes it 33 lines dedicated to one data point.
+#define total_lines 63822
 void data_set_divide()
 {
 	FILE *f,*f1,*f2,*f3,*f4,*f5,*f6,*f7,*f8,*f9,*f0,*d;
@@ -29,19 +29,15 @@ void data_set_divide()
 	f8=fopen("data/eight.txt","a");
 	f9=fopen("data/nine.txt","a");
 	d=fopen("data/dummy.txt","w+");
-	// #anay, if say the file data/three.txt does not exist, your program would crash with a segmentation fault.
-	// Thus, you should check whether the file has opened or not.
-	// f3 = fopen("data/three.txt","a")
-	// if(f3==NULL) {
-	//    printf("could not open file");
-	// }
-	//
-	// There are better ways to handle this issue, we would discuss it latter (man perror)
 
-
+	if(f==NULL||f0==NULL||f1==NULL||f2==NULL||f3==NULL||f4==NULL||f5==NULL||f6==NULL||f7==NULL||f8==NULL||f9==NULL||d==NULL) 
+	{
+		printf("could not open file");
+	}
+	
 	
 	int count=0,n,i;
-	n=31218/33; // bad idea to hardcore numbers .. use a macro for 31218 and 33
+	n=total_lines/lines_per_datapoint; 
 	char c,str[3],ch;
 	char new='\n';
 	char temp0[]=" 0";

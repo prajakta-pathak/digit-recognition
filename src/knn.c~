@@ -5,14 +5,13 @@
 #include"digit.h"
 #define ROW 32
 #define COL 32
-#define SIZE 1500
 int accuracy_two()
 {
 	int count=0,i;
 	float acc;
 	int n1,n2;
 	char fname[16];
-	for(i=0;i<SIZE;i++)
+	for(i=0;i<1500;i++)
 		{
 			sprintf(fname,"data/%d.txt",i);
 			n1=predict(fname);

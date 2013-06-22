@@ -10,3 +10,4 @@ void training_data_divide();
 int accuracy_one();
 int predict(char name[]);
 int accuracy_two();
+float distancesq1(char in[], char ave[]);

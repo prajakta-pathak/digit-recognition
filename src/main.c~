@@ -8,25 +8,7 @@ int main(int argc,char *argv[])
 	int a1=0,a2=0;
 	int i,chk=0;
 	char fname[16];
-	
-	if(argc==2)
-	{
-		if(strcmp(argv[1],"create_tr_data")==0)
-		create_training_data();
-
-		else if(strcmp(argv[1],"break_digitwise")==0)
-		data_set_divide();
-		
-		else if(strcmp(argv[1],"break_samplewise")==0)
-		training_data_divide();
-		
-		else if(strcmp(argv[1],"ave_construct")==0)
-		ave_construct();
-		
-		else
-		printf("Read the instructions and write again :(");
-	}
-	else if(argc==3)
+	if(argc==3)
 	{
 		// getting output by method 1
 		if(strcmp(argv[1],"m1")==0)
