@@ -6,7 +6,7 @@
 
 Two Algorithms Implemented:-
 <ol>
-<li>Constructing the average matrix from all the possible bitmaps corrosponding to all individual digit and then finding the closest match.</li>
+<li>Constructing the average matrix from all the possible bitmaps corrosponding to all individual digits and then finding the closest match.</li>
 <li>k-nearest neighbours.</li>
 </ol>
 
