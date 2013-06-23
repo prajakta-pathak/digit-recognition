@@ -9,6 +9,7 @@
 #define SIZE 1500 // here SIZE refers to the size of our data set 
 int accuracy_one()
 {
+	//this function calculates theaccuracy of method 1
 	int count=0,i;
 	float acc;
 	int n1,n2;
@@ -25,6 +26,7 @@ int accuracy_one()
 }
 int prediction(char name[])
 {
+	//Uses first algorithm to predict the value of required bitmap
 	int n,i;
 	float dist[10];
 	dist[0]=distancesq1(name,"data/ave0.txt");
@@ -43,6 +45,7 @@ int prediction(char name[])
 
 int smallest(float num[])
 {
+	//returns the smallest number in an array
 	int i,res=0;
 	for(i=0;i<10;i++)
 	{
@@ -56,6 +59,7 @@ int smallest(float num[])
 
 float distancesq1(char in[], char ave[])
 {
+	//calculates the euclidean distance between two structures
 	float num1[32][32];
 	float num2[32][32];
 	float dis=0;

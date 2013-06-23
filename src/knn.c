@@ -8,6 +8,7 @@
 #define SIZE 1500
 int accuracy_two()
 {
+	//this function calculates the accuracy of method 2
 	int count=0,i;
 	float acc;
 	int n1,n2;
@@ -26,6 +27,7 @@ int accuracy_two()
 
 int predict(char name[])
 {
+	//Uses knn to predict the value of required bitmap
 	int n=0,res;
 	float dist;
 	int i;
@@ -53,6 +55,7 @@ int predict(char name[])
 
 int largest_count(int num[])
 {
+	//returns the largest number of the array
 	int i,res=0;
 	for(i=0;i<10;i++)
 	{
@@ -66,6 +69,7 @@ int largest_count(int num[])
 
 float distancesq(char in[], char ave[])
 {
+	//calculates the euclidean distance between two structures
 	float num1[ROW][COL];
 	float num2[ROW][COL];
 	float dis=0;
@@ -113,6 +117,7 @@ float distancesq(char in[], char ave[])
 
 int digitrec(char input[])
 {
+		//this function gives the actual value of the digit
 		int n;
 		if(ispresent("data/zero.txt",input,91)==1)
 		{

@@ -1,3 +1,4 @@
+//this function creates 10 files corrosponding to each digit each containing a matrix which consists of the average of all the bitmaps corrosponding to a digit
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
