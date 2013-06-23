@@ -6,6 +6,7 @@
 #include<stdlib.h>
 #include<math.h>
 #include"digit.h"
+#include"representation.h"
 #define SIZE 1500 // here SIZE refers to the size of our data set 
 int accuracy_one()
 {
@@ -54,28 +55,39 @@ int smallest(float num[])
 	return res;
 }
 
+digit_rep initialize_m1(char in[])
+{
+	digit_rep d;
+	int i,j;
+	FILE *f;
+	char c;	
+	f=fopen(in,"r");
+	for(i=0;i<HEIGHT;i++)
+	{
+		for(j=0;j<WIDTH;j++)
+		{
+			c=fgetc(f);
+			if(c=='0')
+			d.data[i][j]=0;
+			else
+			d.data[i][j]=1;
+		}
+		fseek(f,1,SEEK_CUR);
+	}
+	fclose(f);	
+	return d;
+}
+
 float distancesq1(char in[], char ave[])
 {
-	float num1[32][32];
+	digit_rep in;
+	in=initialize_m1(in);
 	float num2[32][32];
 	float dis=0;
 	char c;
-	FILE *f1,*f2;
-	f1=fopen(in,"r");
+	FILE *f2;
 	f2=fopen(ave,"r");
 	int i,j;
-	for(i=0;i<32;i++)
-	{
-		for(j=0;j<32;j++)
-		{
-			c=fgetc(f1);
-			if(c=='0')
-			num1[i][j]=0;
-			else
-			num1[i][j]=1;
-		}
-		fseek(f1,1,SEEK_CUR);
-	}
 	for(i=0;i<32;i++)
 	{
 		for(j=0;j<32;j++)
@@ -90,7 +102,7 @@ float distancesq1(char in[], char ave[])
 			dis=dis+(num1[i][j]-num2[i][j])*(num1[i][j]-num2[i][j]);
 		}
 	}
-	fclose(f1);
+	
 	fclose(f2);
 	return dis;
 }
