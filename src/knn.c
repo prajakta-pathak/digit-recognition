@@ -3,11 +3,13 @@
 #include<stdlib.h>
 #include<math.h>
 #include"digit.h"
+#include"representation.h"
 #define ROW 32
 #define COL 32
 #define SIZE 1500
 int accuracy_two()
 {
+	//this function calculates the accuracy of method 2
 	int count=0,i;
 	float acc;
 	int n1,n2;
@@ -26,6 +28,7 @@ int accuracy_two()
 
 int predict(char name[])
 {
+	//Uses knn to predict the value of required bitmap
 	int n=0,res;
 	float dist;
 	int i;
@@ -53,6 +56,7 @@ int predict(char name[])
 
 int largest_count(int num[])
 {
+	//returns the largest number of the array
 	int i,res=0;
 	for(i=0;i<10;i++)
 	{
@@ -64,55 +68,61 @@ int largest_count(int num[])
 	return res;
 }
 
-float distancesq(char in[], char ave[])
+digit_rep initialize_m2(char in[])
 {
-	float num1[ROW][COL];
-	float num2[ROW][COL];
-	float dis=0;
-	char c;
-	FILE *f1,*f2;
-	f1=fopen(in,"r");
-	f2=fopen(ave,"r");
+	//initializes the struct corrosponding to the file required
+	digit_rep d;
 	int i,j;
-	for(i=0;i<ROW;i++)
+	FILE *f;
+	char c;	
+	f=fopen(in,"r");
+	if(f==NULL)
 	{
-		for(j=0;j<COL;j++)
+		printf("\n fopen() Error!!!\n");
+		//this error is printed if the trainingdata.txt does not exist
+	}	
+	for(i=0;i<HEIGHT;i++)
+	{
+		for(j=0;j<WIDTH;j++)
 		{
-			c=fgetc(f1);
+			c=fgetc(f);
 			if(c=='0')
-			num1[i][j]=0;
+			d.data[i][j]=0;
 			else
-			num1[i][j]=1;
+			d.data[i][j]=1;
 		}
-		fseek(f1,1,SEEK_CUR);
+	
+		fseek(f,1,SEEK_CUR);
 	}
 	
-	for(i=0;i<ROW;i++)
+	
+	fclose(f);	
+	return d;
+}
+float distancesq(char in[], char ave[])
+{
+	//calculates the euclidean distance between two structures
+	digit_rep inp,av;
+	
+	inp=initialize_m2(in);
+	av=initialize_m2(ave);
+	float dis=0;
+	
+	int i,j;
+	for(i=0;i<HEIGHT;i++)
 	{
-		for(j=0;j<COL;j++)
+		for(j=0;j<WIDTH;j++)
 		{
-			c=fgetc(f2);
-			if(c=='0')
-			num2[i][j]=0;
-			else
-			num2[i][j]=1;
-		}
-		fseek(f2,1,SEEK_CUR);
-	}
-	for(i=0;i<32;i++)
-	{
-		for(j=0;j<32;j++)
-		{
-			dis=dis+(num1[i][j]-num2[i][j])*(num1[i][j]-num2[i][j]);
+			dis=dis+(inp.data[i][j]-av.data[i][j])*(inp.data[i][j]-av.data[i][j]);
 		}
 	}
-	fclose(f1);
-	fclose(f2);
+	
+	
 	return dis;
 }
-
 int digitrec(char input[])
 {
+		//this function gives the actual value of the digit
 		int n;
 		if(ispresent("data/zero.txt",input,91)==1)
 		{
