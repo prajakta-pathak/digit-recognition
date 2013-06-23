@@ -10,6 +10,7 @@
 #define SIZE 1500 // here SIZE refers to the size of our data set 
 int accuracy_one()
 {
+	//this function calculates theaccuracy of method 1
 	int count=0,i;
 	float acc;
 	int n1,n2;
@@ -26,6 +27,7 @@ int accuracy_one()
 }
 int prediction(char name[])
 {
+	//Uses first algorithm to predict the value of required bitmap
 	int n,i;
 	float dist[10];
 	dist[0]=distancesq1(name,"data/ave0.txt");
@@ -44,6 +46,7 @@ int prediction(char name[])
 
 int smallest(float num[])
 {
+	//returns the smallest number in an array
 	int i,res=0;
 	for(i=0;i<10;i++)
 	{
@@ -57,11 +60,17 @@ int smallest(float num[])
 
 digit_rep initialize_m1(char in[])
 {
+	//initializes the struct corrosponding to the file required
 	digit_rep d;
 	int i,j;
 	FILE *f;
 	char c;	
 	f=fopen(in,"r");
+	if(f==NULL)
+	{
+		printf("\n fopen() Error!!!\n");
+		//this error is printed if the trainingdata.txt does not exist
+	}	
 	for(i=0;i<HEIGHT;i++)
 	{
 		for(j=0;j<WIDTH;j++)
@@ -72,38 +81,58 @@ digit_rep initialize_m1(char in[])
 			else
 			d.data[i][j]=1;
 		}
+	
 		fseek(f,1,SEEK_CUR);
 	}
+	
+	
 	fclose(f);	
 	return d;
 }
 
-float distancesq1(char in[], char ave[])
+digit_rep initialize_ave(char ave[])
 {
-	digit_rep in;
-	in=initialize_m1(in);
-	float num2[32][32];
-	float dis=0;
-	char c;
-	FILE *f2;
-	f2=fopen(ave,"r");
-	int i,j;
-	for(i=0;i<32;i++)
+	//initializes the struct corrosponding to the average file required
+	digit_rep d;
+	FILE *f;
+	f=fopen(ave,"r");
+	if(f==NULL)
 	{
-		for(j=0;j<32;j++)
+		printf("\n fopen() Error!!!\n");
+		//this error is printed if the trainingdata.txt does not exist
+	}
+	int i,j;
+	char c;
+	for(i=0;i<HEIGHT;i++)
+	{
+		for(j=0;j<WIDTH;j++)
 		{
-			fscanf(f2,"%f",&num2[i][j]);	
+			fscanf(f,"%f",&d.data[i][j]);	
 		}
 	}
-	for(i=0;i<32;i++)
+
+	fclose(f);
+	return d;
+}
+float distancesq1(char in[], char ave[])
+{
+	//calculates the euclidean distance between two structures
+	digit_rep inp,av;
+	
+	inp=initialize_m1(in);
+	av=initialize_ave(ave);
+	float dis=0;
+	
+	int i,j;
+	for(i=0;i<HEIGHT;i++)
 	{
-		for(j=0;j<32;j++)
+		for(j=0;j<WIDTH;j++)
 		{
-			dis=dis+(num1[i][j]-num2[i][j])*(num1[i][j]-num2[i][j]);
+			dis=dis+(inp.data[i][j]-av.data[i][j])*(inp.data[i][j]-av.data[i][j]);
 		}
 	}
 	
-	fclose(f2);
+	
 	return dis;
 }
 
